@@ -1,20 +1,13 @@
 body /*General*/
 {
     background-color: #1d1d1d;
-    margin: 0;
+    margin: 5%;
     padding: 0;
-}
-
-#body
-{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-#main
-{
     width: auto;
     height: auto;
     text-align: center;
@@ -22,20 +15,23 @@ body /*General*/
     color: #b0b0b0;
 }
 
-#me section /*above 1st hr*/
+/*Header*/
+#header
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
-#me header {
+header h1
+{
     display: flex   ;
     flex-direction: column;
     font-size: 24px;
     color: #fff;
-    margin: 0 20px;
+    margin: 20px;
 }
 
 #name
@@ -43,7 +39,6 @@ body /*General*/
     display: flex;
     flex-direction: column;
 }
-
 
 .linkedin-box /*linkedin box*/
 {
@@ -60,6 +55,7 @@ body /*General*/
     height: 50%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     max-height: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -76,30 +72,32 @@ body /*General*/
     height: 60%;
 }
 
-/*Main section*/
-#my_info
+/*Main*/
+main
 {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
 }
 
-.cv
+/*Projects section*/
+#projects
 {
-    margin: auto;
-    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: auto;
 }
 
-a, a:hover, a:focus
+#acronym
 {
-    color: #b0b0b0;
+    margin-top: 0%;
 }
 
-#stats /*stats*/
+/*Stats section*/
+#stats
 {
     display: flex;
     flex-direction: row;
     text-align: center;
+    margin-top: 30px;
 }
 
 .foo, .baz, .bar
@@ -117,4 +115,148 @@ a, a:hover, a:focus
 .bar
 {
     margin-right: auto;
+}
+
+
+
+/*<a> tags*/
+a, a:hover, a:focus
+{
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+/*<hr> tag*/
+hr
+{
+    display: block;
+}
+
+.outer
+{
+    width: 80%;
+}
+
+.inner
+{
+    width: 50%;
+}
+
+.pico
+{
+    width: 30%;
+}
+
+/*<ul>, <li> tags*/
+ul 
+{
+    padding-left: 0;
+    margin: 0;
+    list-style-position: inside;
+}
+
+li 
+{
+    text-align: center;
+}
+
+
+
+/*Mobile support*/
+@media (max-width: 768px) 
+{
+    body 
+    {
+        margin: 5%;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    #header 
+    {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    header h1 
+    {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .linkedin-box 
+    {
+        width: 80%;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    .linkedin-logo 
+    {
+        width: 50%;
+        height: 50%;
+    }
+
+    main 
+    {
+        padding: 10px;
+    }
+
+    #stats 
+    {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .foo, .baz, .bar 
+    {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .foo, .bar 
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    a, a:hover, a:focus 
+    {
+        font-size: 14px;
+    }
+
+    hr 
+    {
+        margin: 20px 0;
+        width: 80%;
+    }
+
+    ul 
+    {
+        padding-left: 20px;
+        margin: 0;
+        list-style-position: inside;
+    }
+
+    li 
+    {
+        text-align: left;
+    }
+
+    #projects 
+    {
+        margin-top: 20px;
+    }
+
+    #acronym 
+    {
+        margin-top: 0;
+    }
+
+    .outer, .inner, .pico 
+    {
+        width: 100%;
+    }
 }
