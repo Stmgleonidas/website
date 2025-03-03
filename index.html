@@ -8,53 +8,60 @@
     <link rel="icon" type="image/x-icon" href="img.ico">
 </head>
 <body>
-    <header id="header">
-            <img src="img.png" alt="photo 1" class="photo"> 
-            
-            <div id="name">
-                <h1>Stamatogiannis Leonidas</h1>
-                <a href="https://www.linkedin.com/in/leonidas-stamatogiannis-363447334/" target="_blank" class="linkedin-box">
-                    <img src="linkedin.png" alt="LinkedIn" class="linkedin-logo">
-                </a>
-            </div>
-            
-
-
-            <img src="img.png" alt="photo 2" class="photo">
-    </header>
-
-    <br><hr class="outer"><br>
+    <nav id="navbar">
+        <a href="#projects" class="nav-link" onclick="showSection('projects')">Projects</a>
+        <a href="#home" class="nav-link" onclick="showSection('home')">Home</a>
+        <a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a>
+    </nav>
 
     <main id="main">
+        <!-- Home Section -->
+        <section id="home" class="section-box">
+            <div class="box">
+                <img src="img.png" alt="Stamatogiannis Leonidas" id="img">
+                <h2>Stamatogiannis Leonidas</h2>
+                <p>Email: stmgleonidas [at] gmail [dot] com</p>
+                <p>Phone: (+30) 694 486 2224</p>
+                <a href="https://www.linkedin.com/in/leonidas-stamatogiannis-363447334/" target="_blank" class="social">LinkedIn</a>
+                <a href="https://www.instagram.com/stmgleonidas/" target="_blank" class="social">Instagram</a>
 
-        <section id="about_me">
-            <h2>About</h2> <hr class="inner">
-            <p>Stamatogiannis Leonidas is a driven Computer Engineering student, in the department of Information and Communication Systems Engineering (I.C.S.D.), University of the Aegean<br>and IEEE member.</p>
-            <p> Although passionate about Cybersecurity, Computer and Telecommunication Technologies, and the foundations of Computer Science,<br> he remains well-rounded across all aspects of the field.</p>
+                <a href="" target="_blank" class="download" download>Download My CV</a>
+                
+                <!-- About Me Section -->
+                <div id="about">
+                    <h3>About</h3>
+                    <p>Stamatogiannis Leonidas is a driven Computer Engineering student, in the department of Information and Communication Systems Engineering (I.C.S.D.), University of the Aegean and IEEE member.</p>
+                    <p>Although passionate about Cybersecurity, Computer and Telecommunication Technologies, and the foundations of Computer Science, he remains well-rounded across all aspects of the field.</p>
+                </div>
+                
+                <!--Stats section-->
+                <div id="stats">
+                    <div class="stat-box" id="first"><p>Coffees I've had: Too many</p></div>
+                    <div class="stat-box" id="second"><p>Programming Languages Learned: 4</p></div>
+                    <div class="stat-box" id="third"><p>Lines of Code Written: ≈ +∞</p></div>
+                </div>
+            </div>
         </section>
 
-        <section id="stats">
-            <div class="foo">
-                <h2>Coffees I've had: Too many</h2>
-            </div>
-
-            <div class="baz">
-                <h2>Programming Languages Learned: 4</h2>
-            </div>
-
-            <div class="bar">
-                <h2>Lines of Code Written ≈ +∞</h2>
-            </div>
+        <!--Contact Section-->
+        <section id="contact">
+            <h2>Contact me via Email</h2>
+            <form action="https://formsubmit.co/stmgleonidas@gmail.com" method="POST" autocomplete="off">
+                <label for="email"><input type="email" id="email" name="email" required placeholder="Your email goes here"></label>
+                <label for="subject"><input type="text" id="subject" name="subject" required placeholder="Subject"></label>
+                <label for="message"><textarea id="message" name="message" rows="4" required placeholder="Your message"></textarea></label>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
 
-
+        <!--Projects Section-->
         <section id="projects">
             <h2>Projects</h2><hr class="inner">
 
 
             <h3>Web projects</h3><hr class="pico">
             <ul>
-                <li><a href="https://stmgleonidas.github.io/segredos/" target="_blank">Local shop landing page (segredos marine)</a></li>
+                <li><a href="https://stmgleonidas.github.io/segredos/" target="_blank">Local shop landing page (Segredos marine)</a></li>
             </ul>
 
             <h3>FOSS contributions</h3>
@@ -65,28 +72,12 @@
                 <li>Coming soon...</li>
             </ul>
         </section>
-        
-        <hr class="inner-outer">
-
-        <section id="contact">
-            <h2>Contact me via Email</h2>
-            <form action="https://formsubmit.co/stmgleonidas@gmail.com" method="POST">
-                <label for="email"><input type="email" id="email" name="email" required placeholder="Your email goes here"></label>
-                <label for="subject"><input type="text" id="subject" name="subject" required placeholder="Subject"></label>
-                <label for="message"><textarea id="message" name="message" rows="4" required placeholder="Your message"></textarea></label>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-
     </main>
 
-    <br><hr class="outer"><br>
+    <footer id="footer">
+        <p>© <span id="year"></span> Stamatogiannis Leonidas. All rights reserved.</p>
+    </footer>    
 
-    <footer>
-        <p>Email: stmgleonidas [at] gmail [dot] com</p>
-        <p>Phone: (+30) 694 496 2224</p>
-        <p>Instagram: <a href="https://www.instagram.com/stmgleonidas/" target="_blank">Stmgleonidas</a></p>  
-        <p>&copy; 2025 Stamatogiannis Leonidas. All rights reserved.</p>  
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
