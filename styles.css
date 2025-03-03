@@ -1,209 +1,224 @@
-body /*General*/
+/*General*/
+body 
 {
-    background-color: #1d1d1d;
-    margin: 5%;
+    margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: auto;
-    height: auto;
-    text-align: center;
+    font-family: Arial, sans-serif;
     background-color: #1d1d1d;
     color: #b0b0b0;
-}
-
-/*Header*/
-#header
-{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    min-height: 100vh;
+    text-align: center;
+    flex-direction: column;
 }
 
-header h1
+
+/*Navbar*/
+#navbar 
 {
-    display: flex   ;
-    flex-direction: column;
-    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 20px;;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);;
+}
+
+.nav-link 
+{
     color: #fff;
-    margin: 20px;
-}
-
-#name
-{
-    display: flex;
-    flex-direction: column;
-}
-
-.linkedin-box /*linkedin box*/
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1d1d1d;
-    color: white;
-    padding: 0;
     text-decoration: none;
-    border-radius: 8px;
-    border: 2px solid #1d1d1d;
-    width: 50%;
-    height: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    max-height: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.linkedin-box:hover 
-{
-    background-color: #1d1d1d;
-}
-
-.linkedin-logo 
-{
-    width: 60%;
-    height: 60%;
-}
-
-/*Main*/
-main
-{
-    display: flex;
-    flex-direction: column;
-}
-
-/*About section*/
-#about_me 
-{
-    background-color: #2a2a2a;
-    color: #b0b0b0;
-    width: 80%;
-    max-width: 800px;
-    padding: 30px;
-    margin: 40px auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-#about_me h2 
-{
-    font-size: 2.2em;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
     font-weight: bold;
-    color: #fff;
-    margin-bottom: 20px;
 }
 
-#about_me p 
+.nav-link:hover 
 {
-    color: #b0b0b0;
-    line-height: 1.6;
+    background-color: #444;
 }
 
 
-
-/*Stats Section*/
-#stats
+/* Main Section */
+#main 
 {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    margin-top: 0px;
-}
-
-.foo, .baz, .bar
-{
-    border: 2px solid #b0b0b0;
-    margin: 10px;
+    width: 100%;
+    max-width: 1200px;
     padding: 20px;
+    position: relative;
 }
 
-.foo
-{
-    margin-left: auto;
-}
 
-.bar
-{
-    margin-right: auto;
-}
-
-/*Projects section*/
-#projects 
+/* Home Section */
+#home 
 {
     background-color: #2a2a2a;
-    color: #b0b0b0;
-    width: 80%;
-    max-width: 800px;
-    padding: 30px;
-    margin: 40px auto;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
     text-align: center;
 }
 
-#projects h2 
+#home .box 
 {
-    font-size: 2.2em;
-    font-weight: bold;
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
 
-#projects h3 
+#home h2
 {
     color: #fff;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin: 10px 0;
 }
 
-
-#projects a 
+#home p 
 {
-    color: #F1C40F;
+    color: #b0b0b0;
+    margin: 5px 0;
+}
+
+.social 
+{
+    color: #5dade2 ;
+    margin: 10px;
+    font-size: 18px;
     text-decoration: none;
 }
 
+.social:hover 
+{
+    color: #e67e22;
+}
 
-/*Contact section*/
+/*CV Download Link*/
+.download 
+{
+    font-size: 18px;
+    font-weight: bold;
+    color: #e67e22 ;
+    text-decoration: none;
+    padding: 12px 40px;
+    border-radius: 50px; 
+    background-color: #333; 
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.download-link:hover 
+{
+    background-color: #f1c40f;
+    color: #1d1d1d;
+}
+
+.download-link:active 
+{
+    background-color: #e67e22;
+    color: #fff; 
+}
+
+
+/*About Section*/
+#about 
+{
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#about-me h3 
+{
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#about-me p 
+{
+    color: #b0b0b0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+
+
+/* Stats Section */
+#stats {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+.stat-box {
+    background-color: #333;
+    padding: 15px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 150px;
+    margin: 10px;
+}
+
+.stat-box p 
+{
+    color: #fff;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+
+/* Contact Section */
 #contact 
 {
     background-color: #2a2a2a;
-    color: #b0b0b0;
-    width: 80%;
-    max-width: 800px;
-    padding: 30px;
-    margin: 40px auto;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
-#contact form 
+#contact h2 
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contact label 
-{
-    margin-bottom: 10px;
-    font-size: 18px;
     color: #fff;
+    font-size: 2.2em;
+    margin-bottom: 20px;
 }
 
-#contact input[type="email"], #contact input[type="text"], #contact textarea 
+form label 
+{
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 18px;
+}
+
+form input, form textarea 
 {
     width: 100%;
     padding: 12px;
-    margin: 8px 0;
+    margin-bottom: 10px;
     border: 1px solid #555;
     border-radius: 5px;
     font-size: 16px;
@@ -211,167 +226,183 @@ main
     background-color: #333;
 }
 
-#contact textarea 
+form button 
 {
-    height: 150px;
-    resize: vertical;
-}
-
-#contact button 
-{
-    padding: 12px 20px;
     background-color: #1D3557;
     color: white;
     border: none;
     border-radius: 5px;
+    padding: 12px 20px;
     font-size: 18px;
     cursor: pointer;
-    margin-top: 20px;
 }
 
-#contact button:hover 
+form button:hover 
 {
     background-color: #457b9d;
 }
 
-#contact #response 
+
+/* Projects Section */
+#projects 
 {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #F1C40F;
+    background-color: #2a2a2a;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
-#contact h2 
+#projects h2 
 {
-    font-size: 2.2em;
-    font-weight: bold;
     color: #fff;
+    font-size: 2.2em;
     margin-bottom: 20px;
 }
 
-
-
-/*Tags*/
-
-/*<a> tags*/
-a, a:hover, a:focus
+#projects h3 
 {
-    color: #b0b0b0;
+    color: #fff;
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+#projects ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+#projects a 
+{
+    color: #5dade2;
+    font-size: 1.2em;
     text-decoration: none;
 }
 
-/*<hr> tag*/
-hr
+#projects a:hover 
 {
-    display: block;
+    color: #5dade2;
 }
 
-.outer
+/* Footer */
+#footer 
 {
-    width: 80%;
-}
-
-.inner-outer
-{
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
     width: 100%;
-}
-.inner
-{
-    width: 50%;
-}
-
-.pico
-{
-    width: 30%;
+    position: fixed;
+    bottom: 0; /* Position it at the bottom */
+    z-index: 10;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/*<ul>, <li> tags*/
-ul 
+#footer p 
 {
-    padding-left: 0;
+    color: #fff;
     margin: 0;
-    list-style-position: inside;
+    font-size: 16px;
 }
 
-li 
-{
-    text-align: center;
-}
-
-/*Mobile support*/
-@media (max-width: 768px) 
-{
+/*Mobile Support*/
+@media (max-width: 768px) {
     body 
     {
-        margin: 10px;
-        padding: 0;
+        padding: 10px;
         font-size: 14px;
     }
-
-    #header 
+    
+    #navbar 
     {
         flex-direction: column;
-        align-items: flex-start;
+        padding: 20px 0;
     }
 
-    header h1 
+    .nav-link 
     {
-        font-size: 20px;
-        margin: 10px;
+        margin: 10px 0;
+        padding: 12px;
     }
 
-    .linkedin-box 
+    #main 
     {
-        width: 80%;
-        height: auto;
-        margin-top: 20px;
+        padding: 10px;
     }
 
-    .linkedin-logo 
+    #home 
     {
-        width: 40%;
-        height: auto;
+        padding: 30px 20px;
     }
 
-    #about_me, #projects, #contact 
+    #img 
     {
-        width: 90%;
-        padding: 20px;
-        margin: 20px auto;
+        width: 120px;
+        height: 120px;
     }
 
-    #about_me h2, #projects h2, #contact h2 
+    #home h2 
     {
-        font-size: 1.8em;
+        font-size: 2em;
+    }
+
+    .social 
+    {
+        font-size: 16px;
+        margin: 8px;
     }
 
     #stats 
     {
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
     }
 
-    .foo, .baz, .bar 
+    .stat-box 
     {
         width: 100%;
         margin: 10px 0;
-        padding: 15px;
     }
 
-    #contact input[type="email"], #contact input[type="text"], #contact textarea 
+    #second 
     {
-        width: 100%;
-        padding: 10px;
+        margin: 0;
     }
 
-    #contact button 
+    #contact 
     {
-        padding: 10px 15px;
-        font-size: 16px;
+        padding: 30px 20px;
     }
 
-    #contact #response 
+    form input, form textarea 
     {
+        font-size: 14px;
+    }
+
+    form button 
+    {
+        padding: 10px 18px;
+    }
+
+    #projects 
+    {
+        padding: 30px 20px;
+    }
+
+    #projects h2 
+    {
+        font-size: 2em;
+    }
+
+    #projects h3 
+    {
+        font-size: 1.6em;
+    }
+
+    #projects ul 
+    {
+        padding: 0;
         font-size: 14px;
     }
 }
