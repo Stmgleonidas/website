@@ -306,6 +306,30 @@ form button:hover
     font-size: 16px;
 }
 
+hr
+{
+    display: block;
+}
+
+.outer
+{
+    width: 80%;
+}
+
+.inner-outer
+{
+    width: 100%;
+}
+.inner
+{
+    width: 50%;
+}
+
+.pico
+{
+    width: 30%;
+}
+
 /*Mobile Support*/
 @media (max-width: 768px) {
     body 
